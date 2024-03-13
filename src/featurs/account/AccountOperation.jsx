@@ -14,7 +14,7 @@ function AccountOperation() {
   const [loanPurpose, setLoanPurpose] = useState("");
   function HandleDeposit(e) {
     e.preventDefault();
-    dispatch(deposit(depositValue));
+    dispatch(deposit(depositValue, currencyType));
     setDepositValue("");
     setCurrencyType("USD");
   }
