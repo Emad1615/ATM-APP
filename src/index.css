@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .input {
+    @apply border-b border-b-stone-300 bg-transparent px-2 py-1 text-xs  outline-none transition-all duration-150 ease-in placeholder:text-sm focus:scale-110
+        focus:border-b-green-500 focus:outline-none;
+  }
+  /* .atm {
+    clip-path: polygon(
+      50% 0%,
+      80% 10%,
+      100% 35%,
+      100% 70%,
+      80% 90%,
+      50% 100%,
+      20% 90%,
+      0% 70%,
+      0% 35%,
+      20% 10%
+    );
+
+    background-color: theme("colors.stone.50");
+  } */
+}
