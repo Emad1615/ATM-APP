@@ -36,11 +36,12 @@ export default function accountReducer(state = initialState, action) {
   }
 }
 // export function deposit(amount) {
-//   return { type: "account/deposit", payload: amount };
+//   return { type: "", payload: amount };
 // }
 
 export function deposit(amount, currencyType) {
-  if (currencyType === "USD") return { type: "c", payload: amount };
+  if (currencyType === "USD")
+    return { type: "account/deposit", payload: amount };
   else
     return async function (dispatch, getState) {
       const res = await fetch(
@@ -48,7 +49,7 @@ export function deposit(amount, currencyType) {
       );
       const data = await res.json();
       const converted = data.rates.USD;
-      dispatch({ type: "data.rates.USD", payload: converted });
+      dispatch({ type: "account/deposit", payload: converted });
     };
 }
 export function wihtdraw(amount) {
