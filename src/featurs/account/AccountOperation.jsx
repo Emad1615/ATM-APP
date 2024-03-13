@@ -18,7 +18,7 @@ function AccountOperation() {
   return (
     <div className="relative ">
       <DisplayBalance />
-      <div className=" px-5 py-12">
+      <div className=" px-5 py-16">
         <form onSubmit={HandleDeposit} className="my-2 grid grid-cols-4 gap-2">
           <label>Deposit</label>
           <input
@@ -57,7 +57,7 @@ function AccountOperation() {
         </form>
         <form
           onSubmit={HandleRequestLoan}
-          className="my-2 grid grid-cols-4   gap-2"
+          className="my-10 grid grid-cols-2 gap-2 border-t py-2"
         >
           <label>Loan </label>
           <input
@@ -81,12 +81,7 @@ function AccountOperation() {
         </form>
         {loan > 0 && (
           <div className="text-center">
-            <button
-              onClick={HandlePayLoan}
-              className="my-2 grid grid-cols-4 gap-2"
-            >
-              PAY LOAN BY {loan}${" "}
-            </button>
+            <button onClick={HandlePayLoan}>PAY LOAN BY {loan}$ </button>
           </div>
         )}
       </div>
