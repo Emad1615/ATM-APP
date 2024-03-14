@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import DisplayBalance from "./DisplayBalance";
 import { useState } from "react";
 import Button from "../../ui/Button";
-import { deposit, payLoan, requestLoan, wihtdraw } from "./accountSlice";
+import { deposit, payLoan, requestLoan, wihtdraw } from "./accountSlice v1";
 
 function AccountOperation() {
   const { loan, isLoading } = useSelector((store) => store.account);

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import Button from "../../ui/Button";
-import { createCustomer } from "./customerSlice";
+import { createCustomer } from "./customerSlice v1";
 import { useState } from "react";
 function CreateCustomer() {
   const [Fullname, setFullname] = useState("");
